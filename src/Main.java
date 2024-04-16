@@ -8,9 +8,9 @@ public class Main {
             System.out.println("1. Afegir figures");
             System.out.println("2. Mostrar informació de totes les figures");
             System.out.println("3. Escalar totes les figures según un valor");
-            System.out.println("4. Mostra la informació de una figura seleccionada");
-            System.out.println("5. Mostra el área de una figura seleccionada");
-            System.out.println("6. Mostra el perímetre de una figura seleccionada");
+            System.out.println("4. Mostra el área de una figura seleccionada");
+            System.out.println("5. Mostra el perímetre de una figura seleccionada");
+            System.out.println("6. Ixir");
             int menu = Leer.leerEntero("Que vols fer? ");
             String seguir = "s";
 
@@ -65,7 +65,21 @@ public class Main {
                     }
                 }
                 if (menu == 4){
-
+                    for (int i = 0; i < figuras.size(); i++) {
+                        System.out.println(i + "-" + figuras.get(i));
+                    }
+                    int ff = Leer.leerEntero("De quina figura vols vore l'area'? ");
+                    System.out.println("El area de la figura es: "+figuras.get(ff).area());
+                }
+                if (menu == 5){
+                    for (int i = 0; i < figuras.size(); i++) {
+                        System.out.println(i + "-" + figuras.get(i));
+                    }
+                    int ff = Leer.leerEntero("De quina figura vols vore el perímetre'? ");
+                    System.out.println("El perimetre de la figura es: "+figuras.get(ff).perimetre());
+                }
+                if (menu == 6){
+                    break;
                 }
             }
         }
